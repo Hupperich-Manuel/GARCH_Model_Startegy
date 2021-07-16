@@ -32,7 +32,7 @@ The GARCH Model from Bollerslev (1986), which explains the conditional variance 
 
 Later on, models such as EGARCH, TGARCH, IGARCH, GJRGARCH were derived from these two.
 
-## 2.2. ARCH(q): Definition and Properties
+### 2.2. ARCH(q): Definition and Properties
 _2.2.1. Properties of the ARCH(q)_
 The Autoregressive Conditional Heteroscedasticity Models help us to model financial time series, as the returns on a financial asset.
 
@@ -96,7 +96,7 @@ To sum up the main takeaways from this model, it is important to consider that t
 
 To sum up the main takeaways from this model, it is important to consider that the conditional mean of the returns is equal to 0; the marginal variance is constant, rather than the conditional variance which depends on the squared returns of past periods. The process of white noise is independent and has no common distribution.
 
-## 2.3. Generalizet ARCH Model: GARCH(p,q)
+### 2.3. Generalizet ARCH Model: GARCH(p,q)
 _2.3.1. Properties of the GARCH(p,q)_
 
 The ARCH Model take some inefficiencies with it. In order get rid of them, the General ARCH Model was settled. The GARCH Model basically considers, besides the past returns r_(t-p), it now adds the past volatility values σ_(t-q). Finally, considering the white noise (error term), we get the following formula 〖r_t=σ〗_t ε_t.
@@ -110,3 +110,32 @@ Bollerslev stated that the conditional variance σ_(t/(t-q))^2 depends on its ow
 ![image](https://user-images.githubusercontent.com/67901472/125919325-090d6c7e-3580-42b0-a9b5-32839967cc7b.png)
 
 ![image](https://user-images.githubusercontent.com/67901472/125919359-d38eca58-1a0f-4126-b8c8-e119847a2579.png)
+
+Notice that we basically add another constant β_j≥0 the other constants α_0>0 and α_i≥0 from the ARCH(p) model. Being β_q σ_(t-q)^2 the previous volatility value, so that the GARCH model considers that the returns distribution at one point will have similar volatility as in  r_(t+q).
+In case of the GARCH (1, 1) which is supposed to be the order for which most of the time series can be fitted, basically considers the return at r_(t-1) and the volatility σ_(t-1).
+GARCH (1, 1): 
+![image](https://user-images.githubusercontent.com/67901472/125919445-6a8af3aa-7387-450d-aaaa-b335bbdd1090.png)
+
+This model GARCH (p, q), is basically the seen ARCH(q) when p=0. Bollerslev establishes several conditions of stationarity in this model, proving r_t to be slightly stationary:
+
+![image](https://user-images.githubusercontent.com/67901472/125919549-2d40e038-49b0-4066-8a92-0d6aa4bca926.png)
+![image](https://user-images.githubusercontent.com/67901472/125919525-491dfbf4-5ac3-468c-8d0d-e041a9f1256e.png)
+![image](https://user-images.githubusercontent.com/67901472/125919581-7512bb0d-5107-442d-a56b-b05a429f97e3.png)
+![image](https://user-images.githubusercontent.com/67901472/125919620-4c880916-33e4-4e0d-baa9-25322440a6df.png)
+
+From the standard GARCH (p, q) other models are obtained. This work will use the alternative model GJRGARCH. The Glosten-Jagannathan-Runkle GARCH model assumes a specific parametric form for this conditional heteroscedasticity, which basically means that it will get the leverage effect of the stylized facts of financial returns (for example: the returns are not normally distributed), which makes the added features more relevant (a correct estimation of the order will be sufficient to beat the standard GARCH) and on the other hand the GJRGARCH model will allow more precision than the standard one. Additionally, the updated model will not work worse than the normal one (Vanilla GARCH), so it is more efficient to make use of it.
+
+
+### 2.4.
+While trying to estimate a correct ARCH and GARCH model it is required to eliminate most of the atypical values that are in the series, since it will allow us to see if the conditional variance models are required or not. In theory the maximum likelihood methodology is used in order to estimate the right models, which are formed by the product of conditional densities, under several assumptions.
+In our case we will use the statistical software R, which contains several packages which enables us to get in deep with the time series analysis and realize a consistent and reliable conditional heteroskedasticity model estimation.
+To do this analysis there was required to run several libraries which entail the necessary packages.
+As a principal data to work on, the ETF from the S&P500 financial time series got chosen. This ETF replicates exactly the global reference index. The financial data is downloaded from yahoo-finance data source (see Fig.: 2), and the time window goes from February 2018 until now, so that we are able to see how the COVID-19 downturn affects our model. Said this, it is also interesting to see the Autocorrelation and the Partial Autocorrelation from this unedited time series, there we observe that the series is non-stationary in its regular part. Both present the same structure as with nearly any other graph, which show us that we can start working on it, and get the ARIMA-ARCH modulation.
+
+![image](https://user-images.githubusercontent.com/67901472/125919803-13e34f71-1bbc-41c6-a964-db274964d28d.png)
+
+![image](https://user-images.githubusercontent.com/67901472/125919816-33692590-96bc-4c73-99e8-fe7a8969ce62.png)
+
+
+
+
