@@ -48,12 +48,38 @@ The core ARCH formula, which allows us to predict future returns is:
 
 The independence of the aforementioned variables allows the returns mean to be zero, that there is no autocorrelation and enables the generation of White Noise. This can be seen in the following formula:
 
-E(r_t )=E(σ_t ε_t )=〖E(σ〗_t)E(ε_t)=0![image](https://user-images.githubusercontent.com/67901472/125918310-ed702c46-3842-4971-9fdf-089065241f4e.png)
+![image](https://user-images.githubusercontent.com/67901472/125918310-ed702c46-3842-4971-9fdf-089065241f4e.png)
 
+So, the conditional mean:
 
-  So, the conditional mean:
-𝐸(𝑟 ) = 𝐸(𝜎 𝜀 ) = 𝐸(𝜎 )𝐸(𝜀 ) = 0 """""
-𝐸(334 ) = 𝐸7384 9𝐸(𝜀") = 0 456 456
-")*
-𝑟=𝜎𝜀 """
+![image](https://user-images.githubusercontent.com/67901472/125918404-ce774ac9-f305-4c1d-9ae3-eb0ca03206d7.png)
+
+As the returns (r_t) are a stationary process, we become a constant marginal σ^2. But as stated before the differentiation starts here, with the implementation of a condition on this constant marginal variance, turning into conditional variance.
+
+Marginal Variance: ![image](https://user-images.githubusercontent.com/67901472/125918478-243caba0-3297-4704-bf69-49ffae7272cf.png)
+
+Conditional Variance:![image](https://user-images.githubusercontent.com/67901472/125918531-8790db65-db7b-48aa-8f10-890d22e6add2.png)
+
+The volatility represents the conditional variance of the time series at a specific point in time, which varies depending on the series structure.
+
+_2.2.2. Model Estimation ARCH(p)_
+
+Said this, we can state that the we will start from a return series with a mean equal to 0, and a non-constant conditional variance (σ_(t/(t-p))^2), which depends on the past returns. 
+But first, in order to become an unbiased estimator of σ_(t/(t-p))^2, we square the returns:
+r_t= σ_(t/(t-p)) ε_t
+r_t=ε_t*√(α_0+α_1 r_(t-1)^2+⋯+α_p r_(t-p)^2 )= σ_(t/(t-p)) ε_t
+σ_(t/(t-p))^2=α_0+α_1 r_(t-1)^2+⋯+α_p r_(t-p)^2 ;	α_0>0 and 0≤α_i≤1;i=1,2,…,p 
+	Where:
+	α_0 lowest observed value of the conditional variance and α_i is a necessary condition to prove the existence of an unconditional and conditional variance (variance is always positive). Both are constants
+	ε_t is a white noise process mean = 0, variance = 1 and covariance j=0. 
+	With random and independent variables beyond them and with past periods, poor stationarity of an ARCH(p) has white noise and allows a conditional variance which varies through the series.
+
+The above-mentioned model explains though that the periods with high volatility will depend on the values of p past periods, so we get:
+σ^2=E(r_t^2 )=E[E(r_(t/(t-1))^2 )]= α_0+α_1 〖E(r〗_(t-1)^2)+⋯+α_q E(r_(t-p)^2)
+From this formula if we isolate the marginal variance we obtain:
+σ^2=α_0+α_1 σ^2+⋯+α_p σ^2
+This ends up with the unconditional constant variance:
+σ^2=α_0/((1-α_1-…-α_p))  with positive values of the constants and below 1.
+ 
+
 
