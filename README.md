@@ -19,4 +19,4 @@ The main message to be transmitted through the whole work is to show the importa
 
 ## 2. GARCH MODEL AND ITS TAKEAWAYS
 ### 2.1 The ARCH and GARCH Models
-##2.1.1. How the Heteroscedasticity variance works, and how such models can be implemented in the time series modelling##
+### #2.1.1. How the Heteroscedasticity variance works, and how such models can be implemented in the time series modelling#
