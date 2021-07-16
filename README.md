@@ -44,10 +44,13 @@ The core ARCH formula, which allows us to predict future returns is:
 
 ![image](https://user-images.githubusercontent.com/67901472/125918098-074a9444-59be-459b-9fe3-a3eeb0297561.png)
 
-![image](https://user-images.githubusercontent.com/67901472/125918134-0add6c54-790f-445f-875e-94fc8498aa80.png)
- is the process of White noise formed by random variables normally distributed with mean=0 and variance =1 and 𝜎" is the volatility factor, both are stationary processes and independent beyond them.
+ε_t is the process of White noise formed by random variables normally distributed with mean=0 and variance =1 and 𝜎_t is the volatility factor, both are stationary processes and independent beyond them.
+
 The independence of the aforementioned variables allows the returns mean to be zero, that there is no autocorrelation and enables the generation of White Noise. This can be seen in the following formula:
-𝑟 =log' " +=log(𝑃)−log(𝑃 ) " 𝑃 " ")*
+
+E(r_t )=E(σ_t ε_t )=〖E(σ〗_t)E(ε_t)=0![image](https://user-images.githubusercontent.com/67901472/125918310-ed702c46-3842-4971-9fdf-089065241f4e.png)
+
+
   So, the conditional mean:
 𝐸(𝑟 ) = 𝐸(𝜎 𝜀 ) = 𝐸(𝜎 )𝐸(𝜀 ) = 0 """""
 𝐸(334 ) = 𝐸7384 9𝐸(𝜀") = 0 456 456
