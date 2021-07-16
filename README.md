@@ -94,5 +94,19 @@ To sum up the main takeaways from this model, it is important to consider that t
 
 ![image](https://user-images.githubusercontent.com/67901472/125918995-93466f1d-8772-4481-b46c-642e9b766d5f.png)
 
-To sum up the main takeaways from this model, it is important to consider that the conditional mean of the returns is equal to 0; the marginal variance is constant, rather than the conditional variance which depends on the squared returns of past periods. The process of white noise is independent and has no common distribution.![image](https://user-images.githubusercontent.com/67901472/125919014-abb5caf9-3223-4fda-9b6c-c25e57ec77b7.png)
+To sum up the main takeaways from this model, it is important to consider that the conditional mean of the returns is equal to 0; the marginal variance is constant, rather than the conditional variance which depends on the squared returns of past periods. The process of white noise is independent and has no common distribution.
 
+## 2.3. Generalizet ARCH Model: GARCH(p,q)
+_2.3.1. Properties of the GARCH(p,q)_
+
+The ARCH Model take some inefficiencies with it. In order get rid of them, the General ARCH Model was settled. The GARCH Model basically considers, besides the past returns r_(t-p), it now adds the past volatility values σ_(t-q). Finally, considering the white noise (error term), we get the following formula 〖r_t=σ〗_t ε_t.
+
+In order to present correctly the dynamic of the variance and the implementation of a fixed delay, the ARCH model required a lot of autoregressive parameters. Bollerslev proposed the GARCH models in order to smooth these restrictions.
+
+_2.3.2. Model Estimation GARCH (p,q)
+
+Bollerslev stated that the conditional variance σ_(t/(t-q))^2 depends on its own previous values and the previous values of the returns.
+
+![image](https://user-images.githubusercontent.com/67901472/125919325-090d6c7e-3580-42b0-a9b5-32839967cc7b.png)
+
+![image](https://user-images.githubusercontent.com/67901472/125919359-d38eca58-1a0f-4126-b8c8-e119847a2579.png)
