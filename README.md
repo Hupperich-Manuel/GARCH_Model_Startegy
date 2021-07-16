@@ -38,10 +38,14 @@ The Autoregressive Conditional Heteroscedasticity Models help us to model financ
 
 The returns on a financial asset can be formulated as follows:
 
-[image](https://user-images.githubusercontent.com/67901472/125917890-91545b65-3754-4eff-b234-d2694728ac24.png)
+![image](https://user-images.githubusercontent.com/67901472/125917890-91545b65-3754-4eff-b234-d2694728ac24.png)
 
 The core ARCH formula, which allows us to predict future returns is:
-𝜀" is the process of White noise formed by random variables normally distributed with mean=0 and variance =1 and 𝜎" is the volatility factor, both are stationary processes and independent beyond them.
+
+![image](https://user-images.githubusercontent.com/67901472/125918098-074a9444-59be-459b-9fe3-a3eeb0297561.png)
+
+![image](https://user-images.githubusercontent.com/67901472/125918134-0add6c54-790f-445f-875e-94fc8498aa80.png)
+ is the process of White noise formed by random variables normally distributed with mean=0 and variance =1 and 𝜎" is the volatility factor, both are stationary processes and independent beyond them.
 The independence of the aforementioned variables allows the returns mean to be zero, that there is no autocorrelation and enables the generation of White Noise. This can be seen in the following formula:
 𝑟 =log' " +=log(𝑃)−log(𝑃 ) " 𝑃 " ")*
   So, the conditional mean:
