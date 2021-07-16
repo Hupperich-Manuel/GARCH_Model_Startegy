@@ -1,7 +1,7 @@
 # GARCH_Model_Startegy
 This code returns the performance of a statistical GARCH model trading strategy
 
-## INTRODUCTION
+## 1. INTRODUCTION
 
 To properly introduce this work, I have to mention one of my life references, Nassim Taleb’s point of view about financial markets, basically, if you think that you can handle it or even predict it, you have lost. The Gaussian bell curve, represented by a normal distribution, does not consider the events in Extremistan1, and this is the main and most mistaken assumption in the financial environment. When it comes to portfolio hedging this misinterpretation takes with it a lot of risk and could end up with high capital losses. There are numerous theories which imply this assumption, a good example could be the Nobel Prize winner William Forsyth Sharpe (1990). Together with other economists, they developed a ratio where he made use of the Gaussian curve to predict the future volatility of a certain series (a risk-return ratio, which worked on the same basis, got included in Markowitz’s Modern Portfolio Theory 1952). Unfortunately, by the time of 2007 any portfolio model based on this ratio failed because of the appearance of an unpredictable event, a Black Swan2. Even by considering this event as “predictable”, as the default risk could have been identified through a rational way (turning the Black Swan into a Grey Swan), no ratio did foresee that.
 
@@ -19,4 +19,4 @@ The main message to be transmitted through the whole work is to show the importa
 
 ## 2. GARCH MODEL AND ITS TAKEAWAYS
 ### 2.1 The ARCH and GARCH Models
-#### ##2.1.1. How the Heteroscedasticity variance works, and how such models can be implemented in the time series modelling##
+##2.1.1. How the Heteroscedasticity variance works, and how such models can be implemented in the time series modelling##
