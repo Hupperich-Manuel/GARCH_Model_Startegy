@@ -66,26 +66,30 @@ _2.2.2. Model Estimation ARCH(p)_
 
 Said this, we can state that the we will start from a return series with a mean equal to 0, and a non-constant conditional variance (σ_(t/(t-p))^2), which depends on the past returns. 
 But first, in order to become an unbiased estimator of σ_(t/(t-p))^2, we square the returns:
-r_t= σ_(t/(t-p)) ε_t
-r_t=ε_t*√(α_0+α_1 r_(t-1)^2+⋯+α_p r_(t-p)^2 )= σ_(t/(t-p)) ε_t
-σ_(t/(t-p))^2=α_0+α_1 r_(t-1)^2+⋯+α_p r_(t-p)^2 ;	α_0>0 and 0≤α_i≤1;i=1,2,…,p 
-	Where:
-	α_0 lowest observed value of the conditional variance and α_i is a necessary condition to prove the existence of an unconditional and conditional variance (variance is always positive). Both are constants
-	ε_t is a white noise process mean = 0, variance = 1 and covariance j=0. 
-	With random and independent variables beyond them and with past periods, poor stationarity of an ARCH(p) has white noise and allows a conditional variance which varies through the series.
+![image](https://user-images.githubusercontent.com/67901472/125920069-dbc115f2-ec6b-4da1-a160-cb5a514bd9a4.png)
+![image](https://user-images.githubusercontent.com/67901472/125920095-ecf170f7-8120-43d4-b160-836660a49329.png)
+![image](https://user-images.githubusercontent.com/67901472/125920123-0f2ad07a-fac8-4b7d-a545-8b045855b209.png)
+Where:
+-α_0 lowest observed value of the conditional variance and α_i is a necessary condition to prove the existence of an unconditional and conditional variance (variance is always positive). Both are constants
+-ε_t is a white noise process mean = 0, variance = 1 and covariance j=0. 
+-With random and independent variables beyond them and with past periods, poor stationarity of an ARCH(p) has white noise and allows a conditional variance which varies through the series.
 
 The above-mentioned model explains though that the periods with high volatility will depend on the values of p past periods, so we get:
-σ^2=E(r_t^2 )=E[E(r_(t/(t-1))^2 )]= α_0+α_1 〖E(r〗_(t-1)^2)+⋯+α_q E(r_(t-p)^2)
+![image](https://user-images.githubusercontent.com/67901472/125920208-65efbc8b-50f0-42a9-a570-2798bc239c20.png)
+
 From this formula if we isolate the marginal variance we obtain:
-σ^2=α_0+α_1 σ^2+⋯+α_p σ^2
+![image](https://user-images.githubusercontent.com/67901472/125920230-bd7cad28-d3cf-46a9-87b6-28c969ff1c70.png)
+
 This ends up with the unconditional constant variance:
-σ^2=α_0/((1-α_1-…-α_p))  with positive values of the constants and below 1.
+![image](https://user-images.githubusercontent.com/67901472/125920291-de06eb6e-9f93-4d9c-83c3-ad656788fc77.png)
+  with positive values of the constants and below 1.
  
 
 Now let’s take an observed value ϵ_t  which represents a non-correlated series with a mean equal to 0 and also non-correlated with the past returns. This observed value is the deduction of the squared returns minus the conditional variance. If we isolate and substitute we obtain:
-ϵ_t= 〖r_t^2-σ〗_(t/(t-p))^2
-r_t^2= σ_(t/(t-p))^2+ϵ_t  ; 〖-(α〗_0+α_1 r_(t-1)^2+⋯+α_q r_(t-p)^2)< ϵ_t
-〖r_t^2= α〗_0+α_1 r_(t-1)^2+⋯+α_q r_(t-p)^2+ϵ_t 
+![image](https://user-images.githubusercontent.com/67901472/125920327-54c52a3e-af3d-4d3e-8759-a87a4734e824.png)
+![image](https://user-images.githubusercontent.com/67901472/125920358-9b48f921-6465-4ab5-8d72-9af76ea6a11f.png)
+![image](https://user-images.githubusercontent.com/67901472/125920402-8059b74b-491b-4451-bdaf-70c4726b3c9a.png)
+
 In an ARCH model, if its standardized errors follow a normal distribution, its corresponding stationary distribution 0<α_i<1 will have fat tails, meaning that its Kurtosis is higher than 0. 
 The ARCH has a Kurtosis above 3, means it is Leptokurtic, that means a higher concentration of data near by the distribution mean (equal to 0), leaving the intermediate areas with respect to the concentrated ones, less filled, generating so fatter tails and a sharper peak with respect to a normal standard distribution. (see Fig.:1).
  
