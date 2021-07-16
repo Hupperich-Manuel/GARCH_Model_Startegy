@@ -19,4 +19,34 @@ The main message to be transmitted through the whole work is to show the importa
 
 ## 2. GARCH MODEL AND ITS TAKEAWAYS
 ### 2.1 The ARCH and GARCH Models
-#2.1.1. How the Heteroscedasticity variance works, and how such models can be implemented in the time series modelling#
+_2.1.1. How the Heteroscedasticity variance works, and how such models can be implemented in the time series modelling_
+
+Let’s start with a brief introduction to understand how the heteroscedasticity variance works, and how can we implement such models on a time series.
+
+Most of the financial time series, as shares, interest rates, exchange rates have certain characteristics in common, which are not considered by the conventional classical lineal models such as AR or ARMA.
+
+One of the main watermarks of these series is the conditional heteroscedasticity, that means, a conditional variance which varies through the series. To get rid of these problems the Autoregressive Conditional Heteroscedasticity Models where created.
+
+The ARCH Model dates back to Engel (1982), where the conditional variance can be explained by the standardized squared errors. Bollerslev (1989) works with the GARCH Model.
+The GARCH Model from Bollerslev (1986), which explains the conditional variance through the squared errors and the past conditional variances.
+
+Later on, models such as EGARCH, TGARCH, IGARCH, GJRGARCH were derived from these two.
+
+## 2.2. ARCH(q): Definition and Properties
+_2.2.1. Properties of the ARCH(q)_
+The Autoregressive Conditional Heteroscedasticity Models help us to model financial time series, as the returns on a financial asset.
+
+The returns on a financial asset can be formulated as follows:
+
+r_t=log⁡(P_t/P_(t-1) )=log⁡(P_t )-log⁡(P_(t-1) )![image](https://user-images.githubusercontent.com/67901472/125917890-91545b65-3754-4eff-b234-d2694728ac24.png)
+
+The core ARCH formula, which allows us to predict future returns is:
+𝜀" is the process of White noise formed by random variables normally distributed with mean=0 and variance =1 and 𝜎" is the volatility factor, both are stationary processes and independent beyond them.
+The independence of the aforementioned variables allows the returns mean to be zero, that there is no autocorrelation and enables the generation of White Noise. This can be seen in the following formula:
+𝑟 =log' " +=log(𝑃)−log(𝑃 ) " 𝑃 " ")*
+  So, the conditional mean:
+𝐸(𝑟 ) = 𝐸(𝜎 𝜀 ) = 𝐸(𝜎 )𝐸(𝜀 ) = 0 """""
+𝐸(334 ) = 𝐸7384 9𝐸(𝜀") = 0 456 456
+")*
+𝑟=𝜎𝜀 """
+
