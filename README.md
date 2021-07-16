@@ -130,7 +130,8 @@ This model GARCH (p, q), is basically the seen ARCH(q) when p=0. Bollerslev esta
 From the standard GARCH (p, q) other models are obtained. This work will use the alternative model GJRGARCH. The Glosten-Jagannathan-Runkle GARCH model assumes a specific parametric form for this conditional heteroscedasticity, which basically means that it will get the leverage effect of the stylized facts of financial returns (for example: the returns are not normally distributed), which makes the added features more relevant (a correct estimation of the order will be sufficient to beat the standard GARCH) and on the other hand the GJRGARCH model will allow more precision than the standard one. Additionally, the updated model will not work worse than the normal one (Vanilla GARCH), so it is more efficient to make use of it.
 
 
-### 2.4.
+### 2.4. Implementation of the ARCH and GARCH Models
+
 While trying to estimate a correct ARCH and GARCH model it is required to eliminate most of the atypical values that are in the series, since it will allow us to see if the conditional variance models are required or not. In theory the maximum likelihood methodology is used in order to estimate the right models, which are formed by the product of conditional densities, under several assumptions.
 In our case we will use the statistical software R, which contains several packages which enables us to get in deep with the time series analysis and realize a consistent and reliable conditional heteroskedasticity model estimation.
 To do this analysis there was required to run several libraries which entail the necessary packages.
