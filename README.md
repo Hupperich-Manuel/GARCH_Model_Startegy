@@ -92,6 +92,7 @@ The ARCH has a Kurtosis above 3, means it is Leptokurtic, that means a higher co
 
 To sum up the main takeaways from this model, it is important to consider that the conditional mean of the returns is equal to 0; the marginal variance is constant, rather than the conditional variance which depends on the squared returns of past periods. The process of white noise is independent and has no common distribution.
 
+![image](https://user-images.githubusercontent.com/67901472/125918995-93466f1d-8772-4481-b46c-642e9b766d5f.png)
 
- ![image](https://user-images.githubusercontent.com/67901472/125918850-0df428b2-bff6-482e-8ec1-a94b377591d6.png)
+To sum up the main takeaways from this model, it is important to consider that the conditional mean of the returns is equal to 0; the marginal variance is constant, rather than the conditional variance which depends on the squared returns of past periods. The process of white noise is independent and has no common distribution.![image](https://user-images.githubusercontent.com/67901472/125919014-abb5caf9-3223-4fda-9b6c-c25e57ec77b7.png)
 
