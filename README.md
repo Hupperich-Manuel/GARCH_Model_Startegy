@@ -82,4 +82,14 @@ This ends up with the unconditional constant variance:
 σ^2=α_0/((1-α_1-…-α_p))  with positive values of the constants and below 1.
  
 
+Now let’s take an observed value ϵ_t  which represents a non-correlated series with a mean equal to 0 and also non-correlated with the past returns. This observed value is the deduction of the squared returns minus the conditional variance. If we isolate and substitute we obtain:
+ϵ_t= 〖r_t^2-σ〗_(t/(t-p))^2
+r_t^2= σ_(t/(t-p))^2+ϵ_t  ; 〖-(α〗_0+α_1 r_(t-1)^2+⋯+α_q r_(t-p)^2)< ϵ_t
+〖r_t^2= α〗_0+α_1 r_(t-1)^2+⋯+α_q r_(t-p)^2+ϵ_t 
+In an ARCH model, if its standardized errors follow a normal distribution, its corresponding stationary distribution 0<α_i<1 will have fat tails, meaning that its Kurtosis is higher than 0. 
+The ARCH has a Kurtosis above 3, means it is Leptokurtic, that means a higher concentration of data near by the distribution mean (equal to 0), leaving the intermediate areas with respect to the concentrated ones, less filled, generating so fatter tails and a sharper peak with respect to a normal standard distribution. (see Fig.:1).
+ 
+
+To sum up the main takeaways from this model, it is important to consider that the conditional mean of the returns is equal to 0; the marginal variance is constant, rather than the conditional variance which depends on the squared returns of past periods. The process of white noise is independent and has no common distribution.
+![image](https://user-images.githubusercontent.com/67901472/125918850-0df428b2-bff6-482e-8ec1-a94b377591d6.png)
 
