@@ -148,6 +148,10 @@ As a principal data to work on, the ETF from the S&P500 financial time series go
 
 ![image](https://user-images.githubusercontent.com/67901472/125919803-13e34f71-1bbc-41c6-a964-db274964d28d.png)
 
+
+![image](https://user-images.githubusercontent.com/67901472/126033576-f8f7c2ba-06ef-4e54-acb9-6b298283359a.png)
+
+
 Our modelling starts on the financial returns of the studied index. In order to get a correct model, we are required to take the logarithmic returns of this financial time series, so that we get rid of the inconveniencies from the ACF and PACF of the S&P500 index. This process is called differentiation. Observing the return graph (see Fig.:4) we realize that there is a white noise (ε_t) along the series, and we can slightly observe that periods with low changes in its returns are followed by low changes and so with the large changes (volatility).
 If we look at the histogram, we can clearly observe how the data is very close to the mean, compared to a normal distribution, leading so to fatter tails and kurtosis. Even if we take a more precise view on the histogram we can see that the distribution in slightly skewed to the right, it is important to consider this view for future calculations (makes sense since it will have more positive than negative returns).
 
