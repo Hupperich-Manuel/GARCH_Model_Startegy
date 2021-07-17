@@ -124,7 +124,9 @@ Bollerslev stated that the conditional variance σ_(t/(t-q))^2 depends on its ow
 
 Notice that we basically add another constant β_j≥0 the other constants α_0>0 and α_i≥0 from the ARCH(p) model. Being β_q σ_(t-q)^2 the previous volatility value, so that the GARCH model considers that the returns distribution at one point will have similar volatility as in  r_(t+q).
 In case of the GARCH (1, 1) which is supposed to be the order for which most of the time series can be fitted, basically considers the return at r_(t-1) and the volatility σ_(t-1).
+
 GARCH (1, 1): 
+
 ![image](https://user-images.githubusercontent.com/67901472/125919445-6a8af3aa-7387-450d-aaaa-b335bbdd1090.png)
 
 This model GARCH (p, q), is basically the seen ARCH(q) when p=0. Bollerslev establishes several conditions of stationarity in this model, proving r_t to be slightly stationary:
