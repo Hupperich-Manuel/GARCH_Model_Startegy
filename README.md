@@ -90,8 +90,11 @@ This ends up with the unconditional constant variance:
  
 
 Now let’s take an observed value ϵ_t  which represents a non-correlated series with a mean equal to 0 and also non-correlated with the past returns. This observed value is the deduction of the squared returns minus the conditional variance. If we isolate and substitute we obtain:
+
 ![image](https://user-images.githubusercontent.com/67901472/125920327-54c52a3e-af3d-4d3e-8759-a87a4734e824.png)
+
 ![image](https://user-images.githubusercontent.com/67901472/125920358-9b48f921-6465-4ab5-8d72-9af76ea6a11f.png)
+
 ![image](https://user-images.githubusercontent.com/67901472/125920402-8059b74b-491b-4451-bdaf-70c4726b3c9a.png)
 
 In an ARCH model, if its standardized errors follow a normal distribution, its corresponding stationary distribution 0<α_i<1 will have fat tails, meaning that its Kurtosis is higher than 0. 
