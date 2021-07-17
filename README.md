@@ -69,7 +69,10 @@ But first, in order to become an unbiased estimator of σ_(t/(t-p))^2, we square
 ![image](https://user-images.githubusercontent.com/67901472/125920069-dbc115f2-ec6b-4da1-a160-cb5a514bd9a4.png)
 ![image](https://user-images.githubusercontent.com/67901472/125920095-ecf170f7-8120-43d4-b160-836660a49329.png)
 ![image](https://user-images.githubusercontent.com/67901472/125920123-0f2ad07a-fac8-4b7d-a545-8b045855b209.png)
+
+
 Where:
+      
       - α_0 lowest observed value of the conditional variance and α_i is a necessary condition to prove the existence of an unconditional and conditional variance (variance is always positive). Both are constants
       - ε_t is a white noise process mean = 0, variance = 1 and covariance j=0. 
       - With random and independent variables beyond them and with past periods, poor stationarity of an ARCH(p) has white noise and allows a conditional variance which varies through the series.
