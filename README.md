@@ -77,14 +77,16 @@ But first, in order to become an unbiased estimator of σ_(t/(t-p))^2, we square
   - With random and independent variables beyond them and with past periods, poor stationarity of an ARCH(p) has white noise and allows a conditional variance which varies through the series.
 
 The above-mentioned model explains though that the periods with high volatility will depend on the values of p past periods, so we get:
+
 ![image](https://user-images.githubusercontent.com/67901472/125920208-65efbc8b-50f0-42a9-a570-2798bc239c20.png)
 
 From this formula if we isolate the marginal variance we obtain:
+
 ![image](https://user-images.githubusercontent.com/67901472/125920230-bd7cad28-d3cf-46a9-87b6-28c969ff1c70.png)
 
 This ends up with the unconditional constant variance:
-![image](https://user-images.githubusercontent.com/67901472/125920291-de06eb6e-9f93-4d9c-83c3-ad656788fc77.png)
-  with positive values of the constants and below 1.
+
+![image](https://user-images.githubusercontent.com/67901472/125920291-de06eb6e-9f93-4d9c-83c3-ad656788fc77.png) with positive values of the constants and below 1.
  
 
 Now let’s take an observed value ϵ_t  which represents a non-correlated series with a mean equal to 0 and also non-correlated with the past returns. This observed value is the deduction of the squared returns minus the conditional variance. If we isolate and substitute we obtain:
