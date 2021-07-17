@@ -155,16 +155,15 @@ As a principal data to work on, the ETF from the S&P500 financial time series go
 Our modelling starts on the financial returns of the studied index. In order to get a correct model, we are required to take the logarithmic returns of this financial time series, so that we get rid of the inconveniencies from the ACF and PACF of the S&P500 index. This process is called differentiation. Observing the return graph (see Fig.:4) we realize that there is a white noise (ε_t) along the series, and we can slightly observe that periods with low changes in its returns are followed by low changes and so with the large changes (volatility).
 If we look at the histogram, we can clearly observe how the data is very close to the mean, compared to a normal distribution, leading so to fatter tails and kurtosis. Even if we take a more precise view on the histogram we can see that the distribution in slightly skewed to the right, it is important to consider this view for future calculations (makes sense since it will have more positive than negative returns).
 
-![image](https://user-images.githubusercontent.com/67901472/126033600-abe28db2-7a3d-4631-9a41-10a55d5cedd4.png)
-
-![image](https://user-images.githubusercontent.com/67901472/126033607-060e928a-8990-4ebe-90b8-e39a25a9e837.png)
+![image](https://user-images.githubusercontent.com/67901472/126033600-abe28db2-7a3d-4631-9a41-10a55d5cedd4.png)![image](https://user-images.githubusercontent.com/67901472/126033607-060e928a-8990-4ebe-90b8-e39a25a9e837.png)
 
 
 Now that we have the required data to work on we have to estimate an ARIMA model in order to eliminate any linear dependence in the series. As we have seen in the S&P500 Returns graph (Fig.: 4) there is no trend, which means that the returns are stationary (To reaffirm these statements a Dickey-Fuller test could be done for a 1% significance).
 As we have no trend the d in the ARIMA model will be 0. Having a look on the Autocorrelations we can observe that several lags hit the significance line, so that we have some possible order combinations. A special attention should be giving to the first five lags (see Fig.:6): since the first one is equal in both graphs, and the following ones which are either significant at both graphs or at one of them. Depending on a certain significance level, there will be some lags which are far more outstanding than the average ones, for example the seventh lag, which could be a random result and as being so far away from the relevant lags it will have no effect on our model.
 
 
-  ![image](https://user-images.githubusercontent.com/67901472/126033619-0153561c-129b-4f99-8923-564869b0ca78.png)
+![image](https://user-images.githubusercontent.com/67901472/126033633-b1f0da63-cdb6-4659-9987-a7f963823dd2.png)
+![image](https://user-images.githubusercontent.com/67901472/126033632-9a7ec17c-9217-4b5c-a589-7ab95efc8c2e.png)
 
 
 
