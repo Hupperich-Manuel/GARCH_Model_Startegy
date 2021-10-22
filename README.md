@@ -1,5 +1,4 @@
 ![Image](https://github.com/Hupperich-Manuel/GARCH_Model_Startegy/blob/ab17471fb4d2b20fefbbd43f1a180463017be1a5/Timeseries.png)
-![image](https://user-images.githubusercontent.com/67901472/125920069-dbc115f2-ec6b-4da1-a160-cb5a514bd9a4.png)
 
 
 # GARCH_Model_Startegy
