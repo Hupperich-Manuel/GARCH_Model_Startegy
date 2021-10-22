@@ -26,7 +26,9 @@ With the outcomes acquired from the R code, we will enable to extrapolate the in
 
 The main message to be transmitted through the whole work is to show the importance of a volatility hedger in any kind of investment purpose, since it is the principal driver of huge losses of investment funds, traders and individual investors. Additionally, I want to raise awareness about the inability to forecast the financial markets, and that it relies on a logical mind to consider the numerous risks.
 
+
 ![Image](https://github.com/Hupperich-Manuel/GARCH_Model_Startegy/blob/573ab7bb49ce950467655e9730553d14da5b76d9/TS1.png)
+
 
 ## 2. GARCH MODEL AND ITS TAKEAWAYS
 ### 2.1 The ARCH and GARCH Models
