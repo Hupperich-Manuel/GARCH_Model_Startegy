@@ -2,7 +2,7 @@
 
 Wanting to become a DataScientist in the near future, i early began to implement several models on data in order to seek the truth behind those values. In this case i will be using Bollerslev GARCH model to see if stock market volatility can be used for risk hedging in portfolio construction.
 
-Feel free to share your opinion to this work, and check also my other projects that are on my github(https://github.com/Hupperich-Manuel?tab=repositories) repositories.
+Feel free to share your opinion to this work, and check also my other projects that are on my [github](https://github.com/Hupperich-Manuel?tab=repositories) repositories.
 
 Enjoy the read!!!
 
