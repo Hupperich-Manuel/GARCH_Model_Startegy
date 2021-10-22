@@ -1,3 +1,6 @@
+![Image](wallpaper_timesetries.jpeg)
+
+
 ## APPLICATION OF THE GARCH MODEL ON FINANCIAL TIME SERIES
 
 Wanting to become a DataScientist in the near future, I early began to implement several models on data in order to seek the truth behind those values. In this case, I will be using the Bollerslev GARCH model to see if stock market volatility can be used for risk hedging in portfolio construction.
