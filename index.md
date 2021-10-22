@@ -1,4 +1,4 @@
-![Image](https://github.com/Hupperich-Manuel/GARCH_Model_Startegy/blob/ab17471fb4d2b20fefbbd43f1a180463017be1a5/Timeseries.png)
+![Image](https://github.com/Hupperich-Manuel/GARCH_Model_Startegy/blob/759f09904c89a4ace2ac3cb386523b3e3939a033/wallpaper_timesetries.jpeg)
 
 
 ## APPLICATION OF THE GARCH MODEL ON FINANCIAL TIME SERIES
