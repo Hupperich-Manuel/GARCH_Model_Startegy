@@ -1,4 +1,4 @@
-![Image](wallpaper_timesetries.peg)
+![Image](Timesetries.peg)
 
 
 ## APPLICATION OF THE GARCH MODEL ON FINANCIAL TIME SERIES
