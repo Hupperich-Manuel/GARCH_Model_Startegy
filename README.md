@@ -1,4 +1,4 @@
-![Image](wallpaper_timesetries.jpeg)
+![Image](Timesetries.peg)
 
 
 # GARCH_Model_Startegy
