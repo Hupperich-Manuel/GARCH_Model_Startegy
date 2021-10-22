@@ -3,8 +3,6 @@
 
 ## APPLICATION OF THE GARCH MODEL ON FINANCIAL TIME SERIES
 
-![Image](https://github.com/Hupperich-Manuel/GARCH_Model_Startegy/blob/759f09904c89a4ace2ac3cb386523b3e3939a033/wallpaper_timesetries.jpeg)
-
 Wanting to become a DataScientist in the near future, I early began to implement several models on data in order to seek the truth behind those values. In this case, I will be using the Bollerslev GARCH model to see if stock market volatility can be used for risk hedging in portfolio construction.
 Feel free to share your opinion on this work, and check also my other projects that are on my [GitHub](https://github.com/Hupperich-Manuel?tab=repositories) repositories.
 Enjoy the read!!!
