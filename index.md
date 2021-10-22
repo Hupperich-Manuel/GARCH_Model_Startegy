@@ -348,6 +348,9 @@ So, considering that it is a high-risk investment way, and that we are not certa
 Finally, I recommend to invest always with common sense, being aware of the risks that these markets take with them. Since the strategy might have worked in the past I does not ensure positive returns in future, since there can be the possibility that the data used for the long-term testing might not be 100% certain. Surely there are far better trading strategies than this one, but in the end, everyone is looking for a way to maximize its profitability and so this way should not be walked on. 
 
 ## 3. LETS LOOK HOW THIS WOULD BE IN R
+
+First lets call the whole cluster of libraries needed for our model:
+
 ```R
 library(quantmod) 
 library(dygraphs) 
@@ -363,7 +366,11 @@ require(downloader)
 library(FinTS)
 library(lmtest)
 par(mfrow=c(1,1))
+```
 
+Done this, we get the S&P500 Logarithmic returns and see how they perform on ACF/PACF and how they behave on the bell curve, seeking randomness and seek if there is stationarity in the time series:
+
+```R
 ticker <- c("SPY")
 sector <- c("SP500")
 symbols <- getSymbols('SPY',from='2018-02-01', to='2020-06-01')
@@ -376,10 +383,14 @@ plot(spyRetsClose, main = "Compound Returns", xlab = "Date", ylab = "Return in p
 acf=acf(spyRetsClose,main='ACF SPY Returns',lag.max=20) 
 pacf=pacf(spyRetsClose,main='PACF SPY Returns',lag.max=20)
 h <- hist(spyRetsClose, breaks=100) xfit<-seq(min(spyRetsClose), max(spyRetsClose), length=90)
-
 yfit<-dnorm(xfit, mean=mean(spyRetsClose, sd=sd(spyRetsClose))) 
 yfit<-yfit*diff(h$mids[1:2]*length(spyRetsClose))
 lines(xfit, yfit)
+```
+
+Now we are able to implement our General Autoregressive Conditional Heteroscedasticity Model on the series (notice how several ordeers where tested in order to get the best possible outcome):
+
+```R
 fit1 <- auto.arima(spyRetsClose, trace=TRUE, test="kpss", ic="bic") 
 x<-arima(spyRetsClose, order = c(3, 0, 0),include.mean = FALSE) 
 coeftest(x)
@@ -409,11 +420,15 @@ gjrGARCH_fit <- ugarchfit(spec = gjrGARCH_spec, data = spyRetsClose)
 ctrl = list(tol = 1e-7, delta = 1e-9)
 gjrGARCH_roll <- ugarchroll(gjrGARCH_spec, spyRetsClose, n.start = 120, refit.every = 1, refit.window = "moving", solver = "hybrid", calculate.VaR = TRUE, VaR.alpha = 0.01, keep.coef = TRUE, solver.control = ctrl, fit.control = list(scale = 1))
 report(gjrGARCH_roll, type = "VaR", VaR.alpha = 0.01, conf.level = 0.99)
-
 plot(gjrGARCH_fit)
 gjrGARCH_fcst <- ugarchforecast(gjrGARCH_fit, n.ahead = 10)
 plot(gjrGARCH_fcst)
 garchroll = as.data.frame(gjrGARCH_roll)
+```
+
+The next step is to get the historical values from ZIP and VIX volatility indexes and see how our predicted volatility model performs in predicting high periods of fluctuations. Moreover, the code is going to display a comparison with the benchmark (in this case the S&P500 index), and see how our styrategy performed compared to that index:
+
+```R
 getSymbols('^VIX',from='2018-02-01')
 plot(VIX$VIX.Close)
 garchPreds = xts(garchroll$Sigma * sqrt(252)*100, order.by=as.Date(rownames(garchroll))) 
@@ -449,6 +464,8 @@ stratStats <- function(rets) {
 charts.PerformanceSummary(compare,colorset=rich6equal) 
 table.DownsideRisk(compare,Rf=.03/12) stratStats(compare)
 ```
+
+This is all for the code. As you see those are not that numerous lines, but you need the technical knowledge if you do not want to get unreliable results from your studied model.
 
 ## 4. CONCLUSION
 
