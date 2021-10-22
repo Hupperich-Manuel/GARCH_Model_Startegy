@@ -1,4 +1,4 @@
-![Image](Timesetries.peg)
+![Image](https://github.com/Hupperich-Manuel/GARCH_Model_Startegy/blob/ab17471fb4d2b20fefbbd43f1a180463017be1a5/Timeseries.png)
 
 
 ## APPLICATION OF THE GARCH MODEL ON FINANCIAL TIME SERIES
