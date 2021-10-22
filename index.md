@@ -1,5 +1,3 @@
-![image](https://user-images.githubusercontent.com/67901472/126033607-060e928a-8990-4ebe-90b8-e39a25a9e837.png)
-
 
 ## APPLICATION OF THE GARCH MODEL ON FINANCIAL TIME SERIES
 
@@ -25,9 +23,6 @@ This work focuses on the usage of the conditional variance models on a financial
 With the outcomes acquired from the R code, we will enable to extrapolate the information obtained from the model and implement it into a functioning investment system. This strategy will have its core point in buying or selling mid-term volatility ETNs, through the accomplishment of stated conditions of our studied heteroscedasticity models.
 
 The main message to be transmitted through the whole work is to show the importance of a volatility hedger in any kind of investment purpose, since it is the principal driver of huge losses of investment funds, traders and individual investors. Additionally, I want to raise awareness about the inability to forecast the financial markets, and that it relies on a logical mind to consider the numerous risks.
-
-
-![Image](https://github.com/Hupperich-Manuel/GARCH_Model_Startegy/blob/573ab7bb49ce950467655e9730553d14da5b76d9/TS1.png)
 
 
 ## 2. GARCH MODEL AND ITS TAKEAWAYS
