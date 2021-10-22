@@ -1,8 +1,10 @@
 ## APPLICATION OF THE GARCH MODEL ON FINANCIAL TIME SERIES
 
-You can use the [editor on GitHub](https://github.com/Hupperich-Manuel/GARCH_Model_Startegy/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+Wanting to become a DataScientist in the near future, i early began to implement several models on data in order to seek the truth behind those values. In this case i will be using Bollerslev GARCH model to see if stock market volatility can be used for risk hedging in portfolio construction.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Feel free to share your opinion to this work, and check also my other projects that are on my github(https://github.com/Hupperich-Manuel?tab=repositories) repositories.
+
+Enjoy the read!!!
 
 # GARCH_Model_Startegy
 This code returns the performance of a statistical GARCH model trading strategy
